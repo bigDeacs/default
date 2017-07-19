@@ -11,4 +11,6 @@
 |
 */
 
-Route::get('/', 'JobsController@index');
+Route::get('/', function () {
+    return view('index');
+});
