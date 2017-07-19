@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 20);
+/******/ 	return __webpack_require__(__webpack_require__.s = 22);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -897,9 +897,9 @@ var Tooltip = function ($) {
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-__webpack_require__(6);
+__webpack_require__(7);
 
-window.Vue = __webpack_require__(18);
+window.Vue = __webpack_require__(20);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -907,7 +907,7 @@ window.Vue = __webpack_require__(18);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', __webpack_require__(15));
+Vue.component('example', __webpack_require__(17));
 
 var app = new Vue({
   el: '#app'
@@ -921,6 +921,12 @@ var app = new Vue({
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -949,7 +955,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1155,11 +1161,10 @@ var Alert = function ($) {
 /* harmony default export */ __webpack_exports__["default"] = (Alert);
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(5);
-__webpack_require__(7);
+__webpack_require__(6);
 __webpack_require__(8);
 __webpack_require__(9);
 __webpack_require__(10);
@@ -1167,11 +1172,13 @@ __webpack_require__(11);
 __webpack_require__(12);
 __webpack_require__(13);
 __webpack_require__(14);
+__webpack_require__(15);
+__webpack_require__(16);
 __webpack_require__(1);
 __webpack_require__(0);
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1352,7 +1359,7 @@ var Button = function ($) {
 /* harmony default export */ __webpack_exports__["default"] = (Button);
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1870,7 +1877,7 @@ var Carousel = function ($) {
 /* harmony default export */ __webpack_exports__["default"] = (Carousel);
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2254,7 +2261,83 @@ var Collapse = function ($) {
 /* harmony default export */ __webpack_exports__["default"] = (Collapse);
 
 /***/ }),
-/* 10 */
+/* 11 */
+/***/ (function(module, exports) {
+
+(function ($) {
+    "use strict"; // Start of use strict
+
+    // Smooth scrolling using jQuery easing
+
+    $('a[href*="#"]:not([href="#"])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top - 48
+                }, 1000, "easeInOutExpo");
+                return false;
+            }
+        }
+    });
+
+    // Activate scrollspy to add active class to navbar items on scroll
+    $('body').scrollspy({
+        target: '#mainNav',
+        offset: 48
+    });
+
+    // Closes responsive menu when a link is clicked
+    $('.navbar-collapse>ul>li>a').click(function () {
+        $('.navbar-collapse').collapse('hide');
+    });
+
+    // Collapse the navbar when page is scrolled
+    $(window).scroll(function () {
+        if ($("#mainNav").offset().top > 100) {
+            $("#mainNav").addClass("navbar-shrink");
+        } else {
+            $("#mainNav").removeClass("navbar-shrink");
+        }
+    });
+
+    // Scroll reveal calls
+    window.sr = ScrollReveal();
+    sr.reveal('.sr-icons', {
+        duration: 600,
+        scale: 0.3,
+        distance: '0px'
+    }, 200);
+    sr.reveal('.sr-button', {
+        duration: 1000,
+        delay: 200
+    });
+    sr.reveal('.sr-contact', {
+        duration: 600,
+        scale: 0.3,
+        distance: '0px'
+    }, 300);
+
+    // Magnific popup calls
+    $('.popup-gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Loading image #%curr%...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0, 1]
+        },
+        image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+        }
+    });
+})(jQuery); // End of use strict
+
+/***/ }),
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2563,7 +2646,7 @@ var Dropdown = function ($) {
 /* harmony default export */ __webpack_exports__["default"] = (Dropdown);
 
 /***/ }),
-/* 11 */
+/* 13 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3134,7 +3217,7 @@ var Modal = function ($) {
 /* harmony default export */ __webpack_exports__["default"] = (Modal);
 
 /***/ }),
-/* 12 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3347,7 +3430,7 @@ var Popover = function ($) {
 /* harmony default export */ __webpack_exports__["default"] = (Popover);
 
 /***/ }),
-/* 13 */
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3690,7 +3773,7 @@ var ScrollSpy = function ($) {
 /* harmony default export */ __webpack_exports__["default"] = (ScrollSpy);
 
 /***/ }),
-/* 14 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3968,14 +4051,14 @@ var Tab = function ($) {
 /* harmony default export */ __webpack_exports__["default"] = (Tab);
 
 /***/ }),
-/* 15 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(16)(
+var Component = __webpack_require__(18)(
   /* script */
-  __webpack_require__(4),
+  __webpack_require__(5),
   /* template */
-  __webpack_require__(17),
+  __webpack_require__(19),
   /* scopeId */
   null,
   /* cssModules */
@@ -4002,7 +4085,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 16 */
+/* 18 */
 /***/ (function(module, exports) {
 
 // this module is a runtime utility for cleaner component module output and will
@@ -4059,7 +4142,7 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
-/* 17 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -4088,7 +4171,7 @@ if (false) {
 }
 
 /***/ }),
-/* 18 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14159,10 +14242,10 @@ Vue$3.compile = compileToFunctions;
 
 module.exports = Vue$3;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(19)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(21)))
 
 /***/ }),
-/* 19 */
+/* 21 */
 /***/ (function(module, exports) {
 
 var g;
@@ -14189,11 +14272,12 @@ module.exports = g;
 
 
 /***/ }),
-/* 20 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(2);
-module.exports = __webpack_require__(3);
+__webpack_require__(3);
+module.exports = __webpack_require__(4);
 
 
 /***/ })

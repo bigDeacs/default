@@ -2,6 +2,7 @@ require('./alert');
 require('./button');
 require('./carousel');
 require('./collapse');
+require('./creative');
 require('./dropdown');
 require('./modal');
 require('./popover');
